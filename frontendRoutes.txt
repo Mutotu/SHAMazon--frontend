@@ -1,0 +1,8 @@
+'/' => homePage
+'/signupin' => Signup and Login
+'/shop' => plantShopPage
+'/shop/:plantId' => plantDetailPage
+'/cart' => cartPage
+'/checkout' => checkoutPage
+'/orders' => allOrdersPage
+'/orders/:orderId' => singleOrderPage
