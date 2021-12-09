@@ -1,5 +1,5 @@
 '/' => homePage
-'/signupin' => Signup and Login
+'/login' => Signup and Login
 '/shop' => plantShopPage
 '/shop/:plantId' => plantDetailPage
 '/cart' => cartPage

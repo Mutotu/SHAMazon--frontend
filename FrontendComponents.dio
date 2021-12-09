@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="BZ5UP0EvT0SycFHhTEOU" name="Page-1">
-        <mxGraphModel dx="1180" dy="1890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1100" dy="1717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -52,7 +52,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Shop Page&lt;br&gt;&lt;br&gt;allPlants" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="35" y="430" width="120" height="150" as="geometry"/>
+                    <mxGeometry x="50" y="420" width="120" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="21">
                     <mxGeometry relative="1" as="geometry"/>
@@ -85,7 +85,7 @@
                     <mxGeometry x="870" y="620" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-                    <mxGeometry x="660" y="15" width="370" height="105" as="geometry"/>
+                    <mxGeometry x="670" y="15" width="370" height="105" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="user,&lt;br&gt;cart," style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="700" y="47.5" width="290" height="62.5" as="geometry"/>
