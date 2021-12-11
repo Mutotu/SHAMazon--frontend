@@ -2,8 +2,8 @@ import '../cssFiles/HomePage.css';
 
 function HomePage(props) {
     return (
-        <div>
-
+        <div className='HomePage'>
+            Welcome to ShAmazon! Where we don't really sell anything at all!
         </div>
     )
 }
