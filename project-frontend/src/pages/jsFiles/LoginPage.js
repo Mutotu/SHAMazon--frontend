@@ -42,7 +42,6 @@ function LoginPage(props) {
     async function submitLogin(e) {
         e.preventDefault();
         const response = await axios.post(`${env.BACKEND_URL}/user/login`, { email: loginInfo.email, password: loginInfo.password });
-        console.log(response);
         const { password, createdAt, updatedAt, ...userRest } = response.data.foundUser;
         setUser(userRest);
         localStorage.setItem('userId', userRest.id);
@@ -51,7 +50,6 @@ function LoginPage(props) {
     async function submitSignup(e) {
         e.preventDefault();
         const response = await axios.post(`${env.BACKEND_URL}/user/signup`, { username: signupInfo.username, email: signupInfo.email, password: signupInfo.password });
-        console.log(response);
         const { password, createdAt, updatedAt, ...userRest } = response.data.user;
         setUser(userRest);
         localStorage.setItem('userId', userRest.id);
