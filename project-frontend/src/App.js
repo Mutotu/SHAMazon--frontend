@@ -1,14 +1,13 @@
-import "./App.css";
-import NavBar from "./components/jsFiles/NavBar";
-import HomePage from "./pages/jsFiles/HomePage";
-import LoginPage from "./pages/jsFiles/LoginPage";
-import ShopPage from "./pages/jsFiles/ShopPage";
-import PlantDetailsPage from "./pages/jsFiles/PlantDetailsPage";
-import CartPage from "./pages/jsFiles/CartPage";
-import CheckoutPage from "./pages/jsFiles/CheckoutPage";
-import AllOrdersPage from "./pages/jsFiles/AllOrdersPage";
-import SingleOrderPage from "./pages/jsFiles/SingleOrderPage";
-
+import './App.css';
+import Header from './components/jsFiles/Header';
+import HomePage from './pages/jsFiles/HomePage';
+import LoginPage from './pages/jsFiles/LoginPage';
+import ShopPage from './pages/jsFiles/ShopPage';
+import PlantDetailsPage from './pages/jsFiles/PlantDetailsPage';
+import CartPage from './pages/jsFiles/CartPage';
+import CheckoutPage from './pages/jsFiles/CheckoutPage';
+import AllOrdersPage from './pages/jsFiles/AllOrdersPage';
+import SingleOrderPage from './pages/jsFiles/SingleOrderPage';
 
 import axios from 'axios';
 import env from 'react-dotenv';
@@ -33,8 +32,8 @@ function App() {
   useEffect(() => { verifyUser(); }, []);
 
   return (
-    <div className='App'>
-      <NavBar />
+    <div className="App">
+      <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
 
@@ -86,6 +85,8 @@ function App() {
             :
             <Navigate to='/login' />
           } />
+
+        <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </div>
   );
