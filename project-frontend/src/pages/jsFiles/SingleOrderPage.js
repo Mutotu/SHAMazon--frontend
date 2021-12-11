@@ -6,6 +6,7 @@ import axios from "axios";
 function SingleOrderPage(props) {
   const [load, setLoad] = useState(null);
   const { orderId } = useParams();
+  const [totalPrice, setTotalPrice] = useState(0);
   const getData = async () => {
     try {
       const data = await axios(`http://localhost:3001/orders/${orderId}`, {
@@ -13,6 +14,7 @@ function SingleOrderPage(props) {
       });
 
       console.log(data);
+      orderTotalPrice(data.data.plants);
       setLoad(data);
     } catch (err) {
       console.log(err);
@@ -24,17 +26,34 @@ function SingleOrderPage(props) {
       <>
         <li>Ordered on : {load.data.orderInfo.createdAt.slice(0, 10)}</li>
         <li>OrderId : {load.data.orderInfo.id}</li>
-        <li>
-          <img src={load.data.plants[0].image} />
-        </li>
-        <li>Price: {load.data.plants[0].price}</li>
+        <li>Total: ${totalPrice}</li>
+        {load.data.plants.map((plant, i) => {
+          return (
+            <>
+              <li>
+                <img src={plant.image} />
+              </li>
+              <li>Price: {plant.price}</li>
+            </>
+          );
+        })}
       </>
     );
   };
 
+  function orderTotalPrice(plants) {
+    let tempTotal = 0;
+    plants.forEach((plant) => {
+      let slicedPrice = Number(plant.price.slice(1, plant.price.length));
+      tempTotal += slicedPrice;
+    });
+    setTotalPrice(tempTotal);
+  }
+
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <div className='card'>
       <ul>{load ? displayOrders() : <p>Loading</p>}</ul>
