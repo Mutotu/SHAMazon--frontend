@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './components/jsFiles/NavBar';
+import Header from './components/jsFiles/Header';
 import HomePage from './pages/jsFiles/HomePage';
 import LoginPage from './pages/jsFiles/LoginPage';
 import ShopPage from './pages/jsFiles/ShopPage';
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
 
@@ -85,6 +85,8 @@ function App() {
             :
             <Navigate to='/login' />
           } />
+
+        <Route path='*' element={<Navigate to='/' />} />
       </Routes>
 
     </div>
