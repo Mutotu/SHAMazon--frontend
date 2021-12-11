@@ -3,9 +3,11 @@ import axios from "axios";
 import env from "react-dotenv";
 import { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 function CheckoutPage(props) {
   //get the cartstate obj from AppContext
+  const navigation = useNavigate();
   const { cartState } = useContext(AppContext);
   const [cart, setCart] = cartState;
   const [street, setStreet] = useState("");
@@ -17,7 +19,8 @@ function CheckoutPage(props) {
   //to sumbit user inf
   const submitUserInfo = (e) => {
     e.preventDefault();
-    const address = { street: street };
+
+    const address = { street, city, state, zip };
     axios
       .post(
         "http://localhost:3001/orders/new",
@@ -29,9 +32,10 @@ function CheckoutPage(props) {
         },
         { headers: { authorization: localStorage.getItem("userId") } }
       )
-      .then((response) => {
-        // console.log(response);
-      });
+
+      .then((response) => {});
+    setCart([]);
+    navigation("/orders");
   };
   return (
     <div>
@@ -77,13 +81,7 @@ function CheckoutPage(props) {
             setCreditNum(e.target.value);
           }}
         />
-        <button
-          onClick={() => {
-            // console.log(street);
-          }}
-        >
-          Submit
-        </button>
+        <input type='submit' value='Submit' />
       </form>
     </div>
   );
