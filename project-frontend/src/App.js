@@ -15,8 +15,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppContext } from './context/AppContext';
 import { useContext, useEffect } from 'react';
 
-function App() {
 
+function App() {
   const { userState } = useContext(AppContext);
   const [user, setUser] = userState;
 
@@ -88,7 +88,6 @@ function App() {
 
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
-
     </div>
   );
 }
