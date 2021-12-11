@@ -1,25 +1,24 @@
-import './App.css';
-import NavBar from './components/jsFiles/NavBar';
-import HomePage from './pages/jsFiles/HomePage';
-import LoginPage from './pages/jsFiles/LoginPage';
-import ShopPage from './pages/jsFiles/ShopPage';
-import PlantDetailsPage from './pages/jsFiles/PlantDetailsPage';
-import CartPage from './pages/jsFiles/CartPage';
-import CheckoutPage from './pages/jsFiles/CheckoutPage';
-import AllOrdersPage from './pages/jsFiles/AllOrdersPage';
-import SingleOrderPage from './pages/jsFiles/SingleOrderPage';
+import "./App.css";
+import NavBar from "./components/jsFiles/NavBar";
+import HomePage from "./pages/jsFiles/HomePage";
+import LoginPage from "./pages/jsFiles/LoginPage";
+import ShopPage from "./pages/jsFiles/ShopPage";
+import PlantDetailsPage from "./pages/jsFiles/PlantDetailsPage";
+import CartPage from "./pages/jsFiles/CartPage";
+import CheckoutPage from "./pages/jsFiles/CheckoutPage";
+import AllOrdersPage from "./pages/jsFiles/AllOrdersPage";
+import SingleOrderPage from "./pages/jsFiles/SingleOrderPage";
 
-import { Routes, Route } from 'react-router-dom';
-import { AppContext } from './context/AppContext';
-import { useContext } from 'react';
+import { Routes, Route } from "react-router-dom";
+import { AppContext } from "./context/AppContext";
+import { useContext } from "react";
 
 function App() {
-
   const { userState } = useContext(AppContext);
   const [user] = userState;
 
   return (
-    <div className="App">
+    <div className='App'>
       <NavBar />
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -31,7 +30,6 @@ function App() {
         <Route path='/orders' element={<AllOrdersPage />} />
         <Route path='/orders/:orderId' element={<SingleOrderPage />} />
       </Routes>
-
     </div>
   );
 }

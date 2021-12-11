@@ -1,0 +1,17 @@
+.card {
+  border: 2px solid black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: 8rem;
+  height: auto;
+}
+
+img {
+  width: 8rem;
+  height: 8rem;
+}
