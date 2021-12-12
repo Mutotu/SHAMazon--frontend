@@ -10,7 +10,7 @@ function SingleOrderPage(props) {
   const getData = async () => {
     try {
       const data = await axios(`http://localhost:3001/orders/${orderId}`, {
-        headers: { authorization: localStorage.getItem("userId") },
+        headers: { authorization: localStorage.getItem("shamazon_token") },
       });
 
       console.log(data);
@@ -30,7 +30,7 @@ function SingleOrderPage(props) {
         {load.data.plants.map((plant, i) => {
           return (
             <>
-              <li>
+              <li key={plant.id}>
                 <img src={plant.image} />
               </li>
               <li>Price: {plant.price}</li>

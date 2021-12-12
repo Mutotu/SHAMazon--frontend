@@ -29,7 +29,7 @@ function AllOrdersPage(props) {
   const getOrders = () => {
     axios
       .get("http://localhost:3001/orders/", {
-        headers: { authorization: localStorage.getItem("userId") },
+        headers: { authorization: localStorage.getItem("shamazon_token") },
       })
       .then((response) => {
         // console.log(response.data[0].plants[0]);

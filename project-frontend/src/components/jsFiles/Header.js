@@ -12,7 +12,7 @@ function Header(props) {
 
     function handleLogoutClick() {
         setUser({});
-        localStorage.removeItem('userId');
+        localStorage.removeItem('shamazon_token');
     }
 
     return (
@@ -21,7 +21,7 @@ function Header(props) {
             <nav className='NavBar'>
                 <button onClick={() => { navigation('/') }}>Home</button>
                 {
-                    user.id ?
+                    user.authorization ?
                         <>
                             <button onClick={() => { navigation('/shop') }}>Shop Plants</button>
                             <button onClick={() => { navigation('/cart') }}>My Cart</button>

@@ -42,17 +42,15 @@ function LoginPage(props) {
     async function submitLogin(e) {
         e.preventDefault();
         const response = await axios.post(`${env.BACKEND_URL}/user/login`, { email: loginInfo.email, password: loginInfo.password });
-        const { password, createdAt, updatedAt, ...userRest } = response.data.foundUser;
-        setUser(userRest);
-        localStorage.setItem('userId', userRest.id);
+        setUser(response.data.user);
+        localStorage.setItem('shamazon_token', response.data.user.authorization);
     }
 
     async function submitSignup(e) {
         e.preventDefault();
         const response = await axios.post(`${env.BACKEND_URL}/user/signup`, { username: signupInfo.username, email: signupInfo.email, password: signupInfo.password });
-        const { password, createdAt, updatedAt, ...userRest } = response.data.user;
-        setUser(userRest);
-        localStorage.setItem('userId', userRest.id);
+        setUser(response.data.user);
+        localStorage.setItem('shamazon_token', response.data.user.authorization);
     }
 
     return (
