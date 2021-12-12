@@ -21,11 +21,10 @@ function App() {
   const [user, setUser] = userState;
 
   async function verifyUser() {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('shamazon_token');
     if (userId) {
       const response = await axios.get(`${env.BACKEND_URL}/user/verify `, { headers: { authorization: userId } })
-      const { password, createdAt, updatedAt, ...userRest } = response.data.verifiedUser;
-      setUser(userRest);
+      setUser(response.data.user);
     }
   }
 

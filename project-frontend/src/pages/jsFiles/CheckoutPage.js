@@ -27,10 +27,9 @@ function CheckoutPage(props) {
         {
           address,
           creditNum,
-
           plants: cart,
         },
-        { headers: { authorization: localStorage.getItem("userId") } }
+        { headers: { authorization: localStorage.getItem("shamazon_token") } }
       )
 
       .then((response) => {});

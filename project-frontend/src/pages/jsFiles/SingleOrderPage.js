@@ -10,7 +10,7 @@ function SingleOrderPage(props) {
   const getData = async () => {
     try {
       const data = await axios(`http://localhost:3001/orders/${orderId}`, {
-        headers: { authorization: localStorage.getItem("userId") },
+        headers: { authorization: localStorage.getItem("shamazon_token") },
       });
 
       console.log(data);

@@ -12,7 +12,7 @@ function Header(props) {
 
     function handleLogoutClick() {
         setUser({});
-        localStorage.removeItem('userId');
+        localStorage.removeItem('shamazon_token');
     }
 
     return (
