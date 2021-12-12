@@ -30,7 +30,7 @@ function SingleOrderPage(props) {
         {load.data.plants.map((plant, i) => {
           return (
             <>
-              <li>
+              <li key={plant.id}>
                 <img src={plant.image} />
               </li>
               <li>Price: {plant.price}</li>

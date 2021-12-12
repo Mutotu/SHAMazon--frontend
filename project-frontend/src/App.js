@@ -37,49 +37,49 @@ function App() {
         <Route path='/' element={<HomePage />} />
 
         <Route path='/login'
-          element={user.id ?
+          element={user.authorization ?
             <Navigate to='/shop' />
             :
             <LoginPage />
           } />
 
         <Route path='/shop'
-          element={user.id ?
+          element={user.authorization ?
             <ShopPage />
             :
             <Navigate to='/login' />
           } />
 
         <Route path='/shop/:plantId'
-          element={user.id ?
+          element={user.authorization ?
             <PlantDetailsPage />
             :
             <Navigate to='/login' />
           } />
 
         <Route path='/cart'
-          element={user.id ?
+          element={user.authorization ?
             <CartPage />
             :
             <Navigate to='/login' />
           } />
 
         <Route path='/checkout'
-          element={user.id ?
+          element={user.authorization ?
             <CheckoutPage />
             :
             <Navigate to='/login' />
           } />
 
         <Route path='/orders'
-          element={user.id ?
+          element={user.authorization ?
             <AllOrdersPage />
             :
             <Navigate to='/login' />
           } />
 
         <Route path='/orders/:orderId'
-          element={user.id ?
+          element={user.authorization ?
             <SingleOrderPage />
             :
             <Navigate to='/login' />
