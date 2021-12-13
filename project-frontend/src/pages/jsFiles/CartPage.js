@@ -64,6 +64,7 @@ function CartPage(props) {
       <h3>Total: ${totalPrice}</h3>
 
       <button
+        className='btn'
         onClick={() => {
           {
             totalPrice === 0 ? navigation("/shop") : navigation("/checkout");
