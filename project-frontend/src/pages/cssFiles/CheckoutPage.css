@@ -38,3 +38,13 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.checkout-input {
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.checkoutElement > label {
+  font-size: larger;
+  font-style: oblique;
+}

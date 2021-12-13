@@ -28,7 +28,11 @@ function CartPage(props) {
   function createPlantItems() {
     return cart.map((plant, idx) => {
       return (
+<<<<<<< HEAD
         <div className="CartPageItem">
+=======
+        <div className='cart-block'>
+>>>>>>> fefcaa9d2e782013da964e6c6f20d1622dcfa8a1
           <PlantItem
             key={plant.id}
             name={plant.name}
