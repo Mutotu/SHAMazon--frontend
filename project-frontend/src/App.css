@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(168, 196, 214);
+  background-color: rgb(222, 230, 235);
 }
 
 .App {
@@ -7,4 +7,22 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  width: 8rem;
+  height: 8rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: 15rem;
+  height: auto;
+  padding: 10px;
+  text-decoration: underline;
+  font-size: larger;
 }

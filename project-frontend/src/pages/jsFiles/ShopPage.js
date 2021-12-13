@@ -27,7 +27,7 @@ function ShopPage(props) {
   function createPlantItems() {
     return allPlants.map((plant, idx) => {
       return (
-        <div key={plant.id}>
+        <div className="ShopPageItem" key={plant.id}>
           <PlantItem
             name={plant.name}
             image={plant.image}
@@ -35,7 +35,7 @@ function ShopPage(props) {
             id = {plant.id}
           />
           <button
-            onClick={() => {
+            className="btn" onClick={() => {
               handleAddCartClick(plant);
             }}
           >

@@ -1,17 +1,15 @@
 .card {
+  border-radius: 20px;
+  background-color: rgb(163, 163, 238);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SingleOrderItem {
   border: 2px solid black;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  width: 8rem;
-  height: auto;
-}
-
-img {
-  width: 8rem;
-  height: 8rem;
+  border-radius: 10px;
+  background-color: rgb(163, 163, 238);
 }
