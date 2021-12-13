@@ -1,4 +1,6 @@
 import "../cssFiles/SingleOrderPage.css";
+import PlantItem from '../../components/jsFiles/PlantItem';
+
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -24,17 +26,21 @@ function SingleOrderPage(props) {
   const displayOrders = () => {
     return (
       <>
-        <li>Ordered on : {load.data.orderInfo.createdAt.slice(0, 10)}</li>
-        <li>OrderId : {load.data.orderInfo.id}</li>
-        <li>Total: ${totalPrice}</li>
+        <ul>
+          <li>Ordered on : {load.data.orderInfo.createdAt.slice(0, 10)}</li>
+          <li>OrderId : {load.data.orderInfo.id}</li>
+          <li>Total: ${totalPrice}</li>
+        </ul>
         {load.data.plants.map((plant, i) => {
           return (
-            <>
-              <li key={plant.id}>
-                <img src={plant.image} />
-              </li>
-              <li>Price: {plant.price}</li>
-            </>
+            <div className="SingleOrderItem">
+              <PlantItem
+                key={plant.id}
+                name={plant.name}
+                image={plant.image}
+                price={plant.price}
+              />
+            </div>
           );
         })}
       </>
@@ -56,7 +62,7 @@ function SingleOrderPage(props) {
 
   return (
     <div className='card'>
-      <ul>{load ? displayOrders() : <p>Loading</p>}</ul>
+      {load ? displayOrders() : <p>Loading</p>}
     </div>
   );
 }
