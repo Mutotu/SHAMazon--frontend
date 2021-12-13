@@ -36,12 +36,14 @@ function CheckoutPage(props) {
     setCart([]);
     navigation("/orders");
   };
+
   return (
     <div className='checkoutPage'>
       <form onSubmit={submitUserInfo} className='checkoutform'>
         <div className='checkoutElement'>
           <label htmlFor='street'>Street:</label>
           <input
+            className='checkout-input'
             type='text'
             placeholder='Enter street'
             value={street}
@@ -53,17 +55,19 @@ function CheckoutPage(props) {
         <div className='checkoutElement'>
           <label htmlFor='city'>City:</label>
           <input
+            className='checkout-input'
             type='text'
             placeholder='Enter city'
             value={city}
             onChange={(e) => {
               setCity(e.target.value);
             }}
-          />{" "}
+          />
         </div>
         <div className='checkoutElement'>
           <label htmlFor='state'>State:</label>
           <input
+            className='checkout-input'
             type='text'
             placeholder='Enter state'
             value={state}
@@ -75,7 +79,8 @@ function CheckoutPage(props) {
         <div className='checkoutElement'>
           <label htmlFor='zip'>Zip:</label>
           <input
-            type='text'
+            className='checkout-input'
+            type='number'
             placeholder='Enter zip'
             value={zip}
             onChange={(e) => {
@@ -86,7 +91,8 @@ function CheckoutPage(props) {
         <div className='checkoutElement'>
           <label htmlFor='creditNum'>Credit Number:</label>
           <input
-            type='text'
+            className='checkout-input'
+            type='number'
             placeholder='Enter credit number'
             value={creditNum}
             onChange={(e) => {
@@ -94,7 +100,14 @@ function CheckoutPage(props) {
             }}
           />
         </div>
-        <input type='submit' value='Submit' className='btn' />
+        <input
+          type='submit'
+          value='Submit'
+          className='btn'
+          disabled={
+            !street || !city || !state || !zip || !creditNum ? true : false
+          }
+        />
       </form>
     </div>
   );
