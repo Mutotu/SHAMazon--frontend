@@ -43,19 +43,19 @@ function App() {
             <LoginPage />
           } />
 
-        <Route path='/shop'
+        <Route path='/shop/*'
           element={user.authorization ?
             <ShopPage />
             :
             <Navigate to='/login' />
           } />
 
-        <Route path='/shop/:plantId'
+        {/* <Route path='/shop/:plantId'
           element={user.authorization ?
             <PlantDetailsPage />
             :
             <Navigate to='/login' />
-          } />
+          } /> */}
 
         <Route path='/cart'
           element={user.authorization ?
