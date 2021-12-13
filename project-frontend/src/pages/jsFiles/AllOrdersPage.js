@@ -15,7 +15,7 @@ function AllOrdersPage(props) {
           let date = item.orderInfo.createdAt.slice(0, 10);
           console.log(date);
           return (
-            <div>
+            <div key={item.orderInfo.id}>
               <li>
                 <Link to={`${item.orderInfo.id}`}>{date}</Link>
               </li>

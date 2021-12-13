@@ -40,7 +40,7 @@ function Header(props) {
                 navigation("/cart");
               }}
             >
-              My Cart: {cart.length}
+              My Cart {cart.length > 0 ? ":" + cart.length : ""}
             </button>
             <button
               onClick={() => {
