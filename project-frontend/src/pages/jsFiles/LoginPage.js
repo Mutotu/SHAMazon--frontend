@@ -55,32 +55,32 @@ function LoginPage(props) {
 
     return (
         <div className='LoginPage'>
-            <div>
+            <div className='FormDiv'>
                 <h2>Login</h2>
                 <form className='LoginForm' onSubmit={submitLogin}>
-                    <div>
+                    <div className='LoginFormElement'>
                         <label htmlFor='email'>Email: </label>
                         <input name="email" type="email" placeholder="Enter an email address" value={loginInfo.email} onChange={handleLoginFormChange} />
                     </div>
-                    <div>
+                    <div className='LoginFormElement'>
                         <label htmlFor='password'>Password: </label>
                         <input name="password" type="password" placeholder="Enter a password" value={loginInfo.password} onChange={handleLoginFormChange} />
                     </div>
                     <input type='submit' value="Login" />
                 </form>
             </div>
-            <div>
+            <div className='FormDiv'>
                 <h2>Signup</h2>
                 <form className='SignupForm' onSubmit={submitSignup}>
-                    <div>
+                    <div className='LoginFormElement'>
                         <label htmlFor='username'>Username: </label>
                         <input name="username" type="text" placeholder="Enter a username" value={signupInfo.username} onChange={handleSignUpFormChange} />
                     </div>
-                    <div>
+                    <div className='LoginFormElement'>
                         <label htmlFor='email'>Email: </label>
                         <input name="email" type="email" placeholder="Enter an email address" value={signupInfo.email} onChange={handleSignUpFormChange} />
                     </div>
-                    <div>
+                    <div className='LoginFormElement'>
                         <label htmlFor='password'>Password: </label>
                         <input name="password" type="password" placeholder="Enter a password" value={signupInfo.password} onChange={handleSignUpFormChange} />
                     </div>

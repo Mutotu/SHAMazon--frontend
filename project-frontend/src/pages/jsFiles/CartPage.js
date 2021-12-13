@@ -28,7 +28,7 @@ function CartPage(props) {
   function createPlantItems() {
     return cart.map((plant, idx) => {
       return (
-        <div>
+        <div className="CartPageItem">
           <PlantItem
             key={plant.id}
             name={plant.name}
@@ -60,16 +60,14 @@ function CartPage(props) {
   useEffect(cartTotalPrice, [cart]);
 
   return (
-    <div>
+    <div className="CartPage">
       {createPlantItems()}
       <h3>Total: ${totalPrice}</h3>
 
       <button
         className='btn'
         onClick={() => {
-          {
-            totalPrice === 0 ? navigation("/shop") : navigation("/checkout");
-          }
+          totalPrice === 0 ? navigation("/shop") : navigation("/checkout");
         }}
       >
         Checkout

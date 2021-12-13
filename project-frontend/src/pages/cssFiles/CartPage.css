@@ -1,3 +1,20 @@
+.CartPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.CartPageItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(163, 163, 238);
+}
+
 .btn {
   display: inline-block;
   padding: 15px 25px;
