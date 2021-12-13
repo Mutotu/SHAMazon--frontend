@@ -37,50 +37,64 @@ function CheckoutPage(props) {
     navigation("/orders");
   };
   return (
-    <div>
-      <form onSubmit={submitUserInfo}>
-        <input
-          type='text'
-          placeholder='Enter street'
-          value={street}
-          onChange={(e) => {
-            setStreet(e.target.value);
-          }}
-        />
-        <input
-          type='text'
-          placeholder='Enter city'
-          value={city}
-          onChange={(e) => {
-            setCity(e.target.value);
-          }}
-        />
-        <input
-          type='text'
-          placeholder='Enter state'
-          value={state}
-          onChange={(e) => {
-            setState(e.target.value);
-          }}
-        />
-
-        <input
-          type='text'
-          placeholder='Enter zip'
-          value={zip}
-          onChange={(e) => {
-            setZip(e.target.value);
-          }}
-        />
-        <input
-          type='text'
-          placeholder='Enter credit number'
-          value={creditNum}
-          onChange={(e) => {
-            setCreditNum(e.target.value);
-          }}
-        />
-        <input type='submit' value='Submit' />
+    <div className='checkoutPage'>
+      <form onSubmit={submitUserInfo} className='checkoutform'>
+        <div className='checkoutElement'>
+          <label htmlFor='street'>Street:</label>
+          <input
+            type='text'
+            placeholder='Enter street'
+            value={street}
+            onChange={(e) => {
+              setStreet(e.target.value);
+            }}
+          />
+        </div>
+        <div className='checkoutElement'>
+          <label htmlFor='city'>City:</label>
+          <input
+            type='text'
+            placeholder='Enter city'
+            value={city}
+            onChange={(e) => {
+              setCity(e.target.value);
+            }}
+          />{" "}
+        </div>
+        <div className='checkoutElement'>
+          <label htmlFor='state'>State:</label>
+          <input
+            type='text'
+            placeholder='Enter state'
+            value={state}
+            onChange={(e) => {
+              setState(e.target.value);
+            }}
+          />
+        </div>
+        <div className='checkoutElement'>
+          <label htmlFor='zip'>Zip:</label>
+          <input
+            type='text'
+            placeholder='Enter zip'
+            value={zip}
+            onChange={(e) => {
+              setZip(e.target.value);
+            }}
+          />
+        </div>
+        <div className='checkoutElement'>
+          <label htmlFor='creditNum'>Credit Number:</label>
+          <input
+            type='text'
+            placeholder='Enter credit number'
+            value={creditNum}
+            onChange={(e) => {
+              setCreditNum(e.target.value);
+            }}
+          />
+        </div>
+        <input type='submit' value='Submit' className='btn' />
       </form>
     </div>
   );

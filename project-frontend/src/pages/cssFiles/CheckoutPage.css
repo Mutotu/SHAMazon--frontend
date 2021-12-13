@@ -1,0 +1,40 @@
+.checkoutform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkoutElement {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.checkoutElement > input,
+.checkoutElement > label {
+  font-size: large;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #76a478;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn:hover {
+  background-color: #d9e8d9;
+  color: black;
+}
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
