@@ -1,0 +1,21 @@
+.ShopPage{
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+
+.ShopPageItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin-bottom: 25px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.ShopPageItem > button {
+    height: fit-content;
+    width: fit-content;
+}
