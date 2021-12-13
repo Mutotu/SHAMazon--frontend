@@ -17,7 +17,7 @@ function Header(props) {
 
     return (
         <div className='Header'>
-            <h1>SHAMazon</h1>
+            <h1 className='Title'>SHAMazon</h1>
             <nav className='NavBar'>
                 <button onClick={() => { navigation('/') }}>Home</button>
                 {
