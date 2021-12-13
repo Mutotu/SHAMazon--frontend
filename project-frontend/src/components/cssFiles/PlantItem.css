@@ -1,0 +1,16 @@
+.PlantItem {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 2fr;
+}
+
+.PlantItem > img {
+    grid-area: ;
+}
+
+.PlantItem > h3 {
+    
+}
+
+.PlantItem > h5 {
+    
+}
