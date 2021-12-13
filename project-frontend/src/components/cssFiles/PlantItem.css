@@ -1,16 +1,17 @@
 .PlantItem {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 2fr;
+    grid-template: 64px 64px / 135px 300px;
 }
 
 .PlantItem > img {
-    grid-area: ;
+    grid-area: 1 / 1 / 3 / 2;
+    border-radius: 10px;
 }
 
 .PlantItem > h3 {
-    
+    grid-area: 1 / 2 / 2 / 2;
 }
 
 .PlantItem > h5 {
-    
+    grid-area: 2 / 2 / 3 / 2;
 }
