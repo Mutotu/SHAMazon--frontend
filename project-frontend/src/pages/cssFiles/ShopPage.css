@@ -13,6 +13,7 @@
 
     border: 2px solid black;
     border-radius: 10px;
+    background-color: rgb(163, 163, 238);
 }
 
 .ShopPageItem > button {
