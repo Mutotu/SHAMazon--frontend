@@ -36,6 +36,7 @@ function CartPage(props) {
             price={plant.price}
           />
           <button
+            className='btn-remove'
             onClick={() => {
               handleRemoveCartClick(idx);
             }}
